@@ -1,8 +1,7 @@
 package co.edu.udea.iw.service;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.fail;
 
-import org.apache.log4j.varia.FallbackErrorHandler;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,14 +23,14 @@ public class ClienteServiceTest {
 
 	@Test
 	@Rollback(false)
-	public void testGuardarCliente()  {
+	public void testGuardarCliente() {
 		try {
-			clienteService.guardarCliente("123", "Matias", "Velasquez", "matiasvelasquez@gmail.com", "juan");
+			clienteService.guardarCliente("123", "Matias", "Velasquez",
+					"matiasvelasquez@gmail.com", "juan");
 		} catch (IWDaoException | IWServiceException e) {
 			e.printStackTrace();
 			fail(e.getMessage());
-			
+
 		}
 	}
-
 }
