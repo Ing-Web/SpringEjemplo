@@ -1,5 +1,6 @@
 package co.edu.udea.iw.service;
 
+import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 import org.junit.Test;
@@ -22,11 +23,13 @@ public class ClienteServiceTest {
 	ClienteService clienteService;
 
 	@Test
-	@Rollback(false)
+	//@Rollback(false)
 	public void testGuardarCliente() {
+
 		try {
-			clienteService.guardarCliente("123", "Matias", "Velasquez",
-					"matiasvelasquez@gmail.com", "juan");
+			
+			clienteService.guardarCliente("1038232", "Matias", "Velasquez", "matias.velasquez@gmail.com", "juan");
+			assertTrue(true);
 		} catch (IWDaoException | IWServiceException e) {
 			e.printStackTrace();
 			fail(e.getMessage());

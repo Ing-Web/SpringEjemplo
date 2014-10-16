@@ -14,6 +14,7 @@ import co.edu.udea.iw.util.validations.Validaciones;
 public class ClienteService {
 
 	private ClienteDAO clienteDAO;
+				
 	private UsuarioDAO usuarioDAO;
 
 	public void guardarCliente(String cedula, String nombres, String apellidos,

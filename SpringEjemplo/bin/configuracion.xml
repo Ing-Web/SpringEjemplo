@@ -49,13 +49,13 @@
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
 
-	<bean id="usuarioDAO" class="co.edu.udea.iw.dao.hibernate.UsuarioDAOHibernate">
+	<bean id="usuarioDao" class="co.edu.udea.iw.dao.hibernate.UsuarioDAOHibernate">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
 
 	<bean id="ClienteService" class="co.edu.udea.iw.service.ClienteService">
 		<property name="clienteDAO" ref="clienteDao"></property>
-		<property name="usuarioDAO" ref="usuarioDAO"></property>
+		<property name="usuarioDAO" ref="usuarioDao"></property>
 	</bean>
 	
 	<context:component-scan base-package="co.edu.udea.iw.rest"/>
