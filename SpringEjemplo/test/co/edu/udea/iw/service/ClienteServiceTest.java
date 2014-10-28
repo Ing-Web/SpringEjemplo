@@ -23,7 +23,7 @@ public class ClienteServiceTest {
 	ClienteService clienteService;
 
 	@Test
-	//@Rollback(false)
+	@Rollback(true)
 	public void testGuardarCliente() {
 
 		try {
