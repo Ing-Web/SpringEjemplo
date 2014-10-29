@@ -19,6 +19,14 @@ public class Cliente implements Serializable {
 	 */
 	private String apellidos;
 
+	public Date getFechaModificacion() {
+		return fechaModificacion;
+	}
+
+	public void setFechaModificacion(Date fechaModificacion) {
+		this.fechaModificacion = fechaModificacion;
+	}
+
 	/**
 	 * Dirección de correo electronico del cliente
 	 */
@@ -97,14 +105,7 @@ public class Cliente implements Serializable {
 		this.correoelectronico = correoelectronico;
 	}
 
-	public Usuario getUsuarioCrea() {
-		return usuarioCrea;
-	}
-
-	public void setUsuarioCrea(Usuario usuarioCrea) {
-		this.usuarioCrea = usuarioCrea;
-	}
-
+	
 	public Date getFechaCreacion() {
 		return fechaCreacion;
 	}
@@ -135,6 +136,14 @@ public class Cliente implements Serializable {
 
 	public void setEliminado(Boolean eliminado) {
 		this.eliminado = eliminado;
+	}
+
+	public Usuario getUsuarioCrea() {
+		return usuarioCrea;
+	}
+
+	public void setUsuarioCrea(Usuario usuarioCrea) {
+		this.usuarioCrea = usuarioCrea;
 	}
 
 	public Usuario getUsuarioElimina() {
