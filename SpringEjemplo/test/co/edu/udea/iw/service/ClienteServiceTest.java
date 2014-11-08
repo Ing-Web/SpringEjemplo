@@ -26,13 +26,13 @@ public class ClienteServiceTest {
 	ClienteService clienteService;
 
 	@Test
-	@Rollback(true)
+	@Rollback(false)
 	public void testGuardarCliente() {
 
 		try {
 
-			clienteService.guardarCliente("1038232", "Matias", "Velasquez",
-					"matias.velasquez@gmail.com", "juan");
+			clienteService.guardarCliente("10382302", "Matias", "Velasquez",
+					"matias.velasquez@gmail.com", "elver");
 			assertTrue(true);
 		} catch (IWDaoException | IWServiceException e) {
 			e.printStackTrace();

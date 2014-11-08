@@ -22,7 +22,7 @@
 			<column name="EMAIL" length="120" not-null="true" />
 		</property>
 
-		<many-to-one name="usuarioCrea" class="co.edu.udea.iw.dto.Rol">
+		<many-to-one name="usuarioCrea" class="co.edu.udea.iw.dto.Usuario">
 			<column name="USUARIOCREA" length="15" not-null="true" />
 		</many-to-one>
 
